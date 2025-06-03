@@ -220,7 +220,160 @@ const Home = () => {
           </div>
         </div>
       </section>
+{/* About Section */}
+      <section id="about" className="py-20 md:py-32 bg-gradient-to-b from-white via-surface-50/50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(139,92,246,0.05),rgba(255,255,255,0))]"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16 md:mb-24"
+          >
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-electric-purple/10 border border-electric-purple/20 rounded-full text-sm font-semibold text-electric-purple mb-6">
+              <ApperIcon name="Users" className="h-4 w-4" />
+              About Dreamwares
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-surface-900 mb-6 md:mb-8">
+              Pioneering the <span className="text-gradient-blue">Future of AI</span>
+            </h2>
+            <p className="text-xl md:text-2xl text-surface-600 max-w-4xl mx-auto leading-relaxed">
+              We are a team of AI experts, data scientists, and engineers dedicated to transforming businesses 
+              through cutting-edge artificial intelligence solutions and strategic innovation.
+            </p>
+          </motion.div>
 
+          {/* Company Stats */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-20 md:mb-28"
+          >
+            {[
+              { number: "8+", label: "Years of Experience", icon: "Calendar" },
+              { number: "500+", label: "Projects Completed", icon: "CheckCircle" },
+              { number: "200+", label: "Clients Served", icon: "Users" },
+              { number: "1000+", label: "AI Models Deployed", icon: "Brain" }
+            ].map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="floating-card p-6 md:p-8 rounded-2xl shadow-soft border-0 h-full">
+                  <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-electric-purple to-secondary rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg">
+                    <ApperIcon name={stat.icon} className="h-6 w-6 md:h-8 md:w-8 text-white" />
+                  </div>
+                  <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient-blue mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-surface-600 font-medium text-sm md:text-base">
+                    {stat.label}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Mission & Values */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20 md:mb-28">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="order-2 lg:order-1"
+            >
+              <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-surface-900 mb-6 md:mb-8">
+                Our <span className="text-gradient-blue">Mission</span>
+              </h3>
+              <p className="text-lg md:text-xl text-surface-600 leading-relaxed mb-8">
+                To democratize artificial intelligence by making advanced AI solutions accessible, 
+                practical, and transformative for businesses of all sizes. We believe AI should enhance 
+                human capabilities, not replace them.
+              </p>
+              <div className="space-y-4">
+                {[
+                  "Accelerate digital transformation through AI innovation",
+                  "Deliver measurable business value with every solution",
+                  "Maintain highest standards of ethics and transparency"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-1">
+                      <ApperIcon name="Check" className="h-4 w-4 text-green-600" />
+                    </div>
+                    <span className="text-surface-700 leading-relaxed">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="order-1 lg:order-2"
+            >
+              <div className="grid grid-cols-2 gap-6">
+                {[
+                  { title: "AI Expertise", icon: "Brain", color: "from-secondary to-electric-blue" },
+                  { title: "Innovation", icon: "Lightbulb", color: "from-electric-purple to-electric-pink" },
+                  { title: "Reliability", icon: "Shield", color: "from-green-500 to-emerald-500" },
+                  { title: "Support", icon: "HeartHandshake", color: "from-orange-500 to-red-500" }
+                ].map((value, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="floating-card p-6 rounded-2xl shadow-soft border-0 text-center group"
+                  >
+                    <div className={`w-12 h-12 bg-gradient-to-br ${value.color} rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-all duration-300 shadow-lg`}>
+                      <ApperIcon name={value.icon} className="h-6 w-6 text-white" />
+                    </div>
+                    <h4 className="font-bold text-surface-900 group-hover:text-secondary transition-colors duration-300">
+                      {value.title}
+                    </h4>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Vision & CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="floating-card p-8 md:p-12 lg:p-16 rounded-3xl shadow-soft border-0 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-secondary/5 to-electric-purple/5 rounded-full -translate-y-20 translate-x-20"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-br from-electric-cyan/5 to-electric-purple/5 rounded-full translate-y-16 -translate-x-16"></div>
+              
+              <div className="relative z-10">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-surface-900 mb-6 md:mb-8">
+                  Building Tomorrow's <span className="text-gradient-blue">AI-Powered World</span>
+                </h3>
+                <p className="text-lg md:text-xl text-surface-600 leading-relaxed mb-8 md:mb-12">
+                  We envision a future where artificial intelligence seamlessly integrates with human creativity 
+                  and intuition, creating unprecedented opportunities for growth, innovation, and positive impact 
+                  across all industries.
+                </p>
+                <button className="btn-electric text-white px-8 py-4 md:px-10 md:py-5 rounded-2xl font-semibold text-lg md:text-xl transition-all duration-300 group">
+                  Learn More About Us
+                  <ApperIcon name="ArrowRight" className="ml-3 h-6 w-6 inline group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
 {/* Services Section */}
       <section id="services" className="py-20 md:py-32 bg-gradient-to-b from-white to-surface-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
