@@ -440,12 +440,12 @@ const Home = () => {
                       By {post?.author || 'Dreamwares Team'}
                     </span>
                     <button className="text-primary font-medium hover:text-primary-dark transition-colors">
-<button className="text-primary font-medium hover:text-primary-dark transition-colors">
                       Read More
                       <ApperIcon name="ArrowRight" className="ml-1 h-4 w-4 inline" />
                     </button>
                   </div>
                 </div>
+              </motion.article>
             ))}
           </div>
         </div>
