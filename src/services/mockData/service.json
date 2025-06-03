@@ -102,26 +102,8 @@
       "Cloud Migration Services",
       "Business Intelligence Dashboards"
     ],
-    "pricing": {
+"pricing": {
       "starting": "$35,000",
-      "type": "project-based"
-    }
-  },
-  {
-    "id": "7",
-    "title": "Robotic Process Automation",
-    "description": "Automate repetitive business processes with intelligent RPA solutions that learn and adapt to your workflow patterns.",
-    "icon": "Cpu",
-    "features": [
-      "Process Analysis & Mapping",
-      "Bot Development & Deployment",
-      "Intelligent Document Processing",
-      "Workflow Automation",
-      "Exception Handling",
-      "Performance Monitoring"
-    ],
-    "pricing": {
-      "starting": "$18,000",
       "type": "project-based"
     }
   },
