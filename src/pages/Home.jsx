@@ -51,14 +51,14 @@ const Home = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-          <p className="text-surface-600">Loading AIVantage...</p>
-        </div>
+<div className="min-h-screen flex items-center justify-center">
+      <div className="text-center">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+        <p className="text-surface-600">Loading Dreamwares...</p>
       </div>
-    )
-  }
+    </div>
+  )
+}
 
   if (error) {
     return (
@@ -82,10 +82,10 @@ const Home = () => {
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-3"
             >
-              <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+<div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                 <ApperIcon name="Zap" className="h-5 w-5 md:h-6 md:w-6 text-white" />
               </div>
-              <span className="text-xl md:text-2xl font-bold text-gradient">AIVantage</span>
+              <span className="text-xl md:text-2xl font-bold text-gradient">Dreamwares</span>
             </motion.div>
             
             <div className="hidden md:flex items-center space-x-8">
@@ -435,18 +435,17 @@ const Home = () => {
                   <p className="text-surface-600 mb-4 line-clamp-3">
                     {post?.content?.substring(0, 120) || 'Blog post excerpt...'}...
                   </p>
-
-                  <div className="flex items-center justify-between">
+<div className="flex items-center justify-between">
                     <span className="text-sm text-surface-500">
-                      By {post?.author || 'AIVantage Team'}
+                      By {post?.author || 'Dreamwares Team'}
                     </span>
                     <button className="text-primary font-medium hover:text-primary-dark transition-colors">
+<button className="text-primary font-medium hover:text-primary-dark transition-colors">
                       Read More
                       <ApperIcon name="ArrowRight" className="ml-1 h-4 w-4 inline" />
                     </button>
                   </div>
                 </div>
-              </motion.article>
             ))}
           </div>
         </div>
@@ -458,10 +457,10 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+<div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
                   <ApperIcon name="Zap" className="h-6 w-6 text-white" />
                 </div>
-                <span className="text-2xl font-bold">AIVantage</span>
+                <span className="text-2xl font-bold">Dreamwares</span>
               </div>
               <p className="text-surface-300 mb-6 max-w-md">
                 Empowering businesses with cutting-edge AI solutions. Transform your operations with machine learning, NLP, computer vision, and strategic AI consulting.
@@ -495,12 +494,11 @@ const Home = () => {
               </ul>
             </div>
           </div>
-
-          <div className="border-t border-surface-800 mt-12 pt-8 text-center">
+<div className="border-t border-surface-800 mt-12 pt-8 text-center">
             <p className="text-surface-400">
-              © 2024 AIVantage. All rights reserved. Built with advanced AI technologies.
+              © 2024 Dreamwares. All rights reserved. Built with advanced AI technologies.
             </p>
-          </div>
+</div>
         </div>
       </footer>
     </div>

@@ -456,9 +456,9 @@ const MainFeature = () => {
             >
               <h3 className="text-xl font-bold text-white mb-6">Get In Touch</h3>
               
-              <div className="space-y-4">
+<div className="space-y-4">
                 {[
-                  { icon: 'Mail', label: 'Email', value: 'contact@aivantage.ai' },
+                  { icon: 'Mail', label: 'Email', value: 'contact@dreamwares.ai' },
                   { icon: 'Phone', label: 'Phone', value: '+1 (555) 123-4567' },
                   { icon: 'MapPin', label: 'Office', value: 'San Francisco, CA' },
                   { icon: 'Clock', label: 'Response Time', value: '< 24 hours' }
@@ -532,10 +532,10 @@ const MainFeature = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
+transition={{ delay: 0.4 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
             >
-              <h3 className="text-xl font-bold text-white mb-6">Why Choose AIVantage</h3>
+              <h3 className="text-xl font-bold text-white mb-6">Why Choose Dreamwares</h3>
               
               <div className="space-y-4">
                 {[
