@@ -1,0 +1,146 @@
+[
+  {
+    "id": "1",
+    "title": "Machine Learning Solutions",
+    "description": "Advanced machine learning algorithms and models tailored to your business needs. From predictive analytics to automated decision-making systems.",
+    "icon": "Brain",
+    "features": [
+      "Predictive Analytics & Forecasting",
+      "Classification & Clustering Models",
+      "Recommendation Systems",
+      "Anomaly Detection",
+      "Model Training & Optimization",
+      "MLOps & Model Deployment"
+    ],
+    "pricing": {
+      "starting": "$25,000",
+      "type": "project-based"
+    }
+  },
+  {
+    "id": "2",
+    "title": "Computer Vision",
+    "description": "Transform visual data into actionable insights with cutting-edge computer vision technology for image recognition, object detection, and visual analytics.",
+    "icon": "Eye",
+    "features": [
+      "Image & Video Analysis",
+      "Object Detection & Recognition",
+      "Facial Recognition Systems",
+      "Quality Control Automation",
+      "Medical Image Analysis",
+      "Real-time Visual Processing"
+    ],
+    "pricing": {
+      "starting": "$30,000",
+      "type": "project-based"
+    }
+  },
+  {
+    "id": "3",
+    "title": "Natural Language Processing",
+    "description": "Unlock the power of text and speech with advanced NLP solutions including sentiment analysis, chatbots, and language understanding systems.",
+    "icon": "MessageSquare",
+    "features": [
+      "Sentiment Analysis & Text Mining",
+      "Chatbot Development",
+      "Language Translation",
+      "Document Processing",
+      "Voice Recognition",
+      "Content Generation"
+    ],
+    "pricing": {
+      "starting": "$20,000",
+      "type": "project-based"
+    }
+  },
+  {
+    "id": "4",
+    "title": "AI Strategy Consulting",
+    "description": "Strategic guidance and roadmap development for AI adoption, helping you identify opportunities and implement AI solutions effectively.",
+    "icon": "TrendingUp",
+    "features": [
+      "AI Readiness Assessment",
+      "Technology Roadmap Planning",
+      "ROI Analysis & Business Case",
+      "Change Management Support",
+      "Team Training & Development",
+      "Implementation Strategy"
+    ],
+    "pricing": {
+      "starting": "$15,000",
+      "type": "consulting"
+    }
+  },
+  {
+    "id": "5",
+    "title": "Custom AI Solutions",
+    "description": "Bespoke AI applications designed specifically for your unique business challenges and requirements.",
+    "icon": "Zap",
+    "features": [
+      "Custom Algorithm Development",
+      "End-to-end AI Applications",
+      "API Development & Integration",
+      "Cloud-native Solutions",
+      "Performance Optimization",
+      "Ongoing Support & Maintenance"
+    ],
+    "pricing": {
+      "starting": "$40,000",
+      "type": "project-based"
+    }
+  },
+  {
+    "id": "6",
+    "title": "Data Engineering & Analytics",
+    "description": "Build robust data infrastructure and analytics platforms to power your AI initiatives with clean, accessible, and scalable data solutions.",
+    "icon": "Database",
+    "features": [
+      "Data Pipeline Development",
+      "Data Warehouse Design",
+      "Real-time Analytics",
+      "Data Quality Management",
+      "Cloud Migration Services",
+      "Business Intelligence Dashboards"
+    ],
+    "pricing": {
+      "starting": "$35,000",
+      "type": "project-based"
+    }
+  },
+  {
+    "id": "7",
+    "title": "Robotic Process Automation",
+    "description": "Automate repetitive business processes with intelligent RPA solutions that learn and adapt to your workflow patterns.",
+    "icon": "Cpu",
+    "features": [
+      "Process Analysis & Mapping",
+      "Bot Development & Deployment",
+      "Intelligent Document Processing",
+      "Workflow Automation",
+      "Exception Handling",
+      "Performance Monitoring"
+    ],
+    "pricing": {
+      "starting": "$18,000",
+      "type": "project-based"
+    }
+  },
+  {
+    "id": "8",
+    "title": "AI Model Optimization",
+    "description": "Enhance the performance, efficiency, and accuracy of your existing AI models with advanced optimization techniques and monitoring.",
+    "icon": "Settings",
+    "features": [
+      "Model Performance Analysis",
+      "Hyperparameter Tuning",
+      "Model Compression & Pruning",
+      "Inference Optimization",
+      "A/B Testing Framework",
+      "Continuous Model Monitoring"
+    ],
+    "pricing": {
+      "starting": "$22,000",
+      "type": "optimization"
+    }
+  }
+]

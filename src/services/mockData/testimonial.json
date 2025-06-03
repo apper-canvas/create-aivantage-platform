@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "clientName": "Sarah Johnson",
+    "company": "TechFlow Industries",
+    "rating": 5,
+    "content": "AIVantage transformed our manufacturing process with their computer vision solution. We've seen a 40% reduction in quality control errors and saved over $2M annually. Their team's expertise and support throughout the implementation was exceptional.",
+    "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b17c?w=150",
+    "featured": true
+  },
+  {
+    "id": "2",
+    "clientName": "Michael Chen",
+    "company": "FinanceFirst Bank",
+    "rating": 5,
+    "content": "The machine learning models developed by AIVantage for fraud detection have been game-changing. We've improved our detection rate by 65% while reducing false positives. The ROI exceeded our expectations within the first quarter.",
+    "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150",
+    "featured": true
+  },
+  {
+    "id": "3",
+    "clientName": "Emily Rodriguez",
+    "company": "HealthCare Plus",
+    "rating": 5,
+    "content": "Working with AIVantage on our patient data analytics platform was seamless. Their NLP solution helps us process medical records 10x faster while maintaining accuracy. The insights we gain now directly improve patient care.",
+    "avatar": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=150",
+    "featured": true
+  },
+  {
+    "id": "4",
+    "clientName": "David Park",
+    "company": "RetailMax Corporation",
+    "rating": 5,
+    "content": "The recommendation system AIVantage built for us increased our online sales by 28% in just three months. Their team understood our business needs perfectly and delivered beyond our expectations. Highly recommended!",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+    "featured": false
+  },
+  {
+    "id": "5",
+    "clientName": "Lisa Thompson",
+    "company": "LogiStream Solutions",
+    "rating": 5,
+    "content": "AIVantage's supply chain optimization AI helped us reduce logistics costs by 22% while improving delivery times. Their approach to understanding our complex operations and providing tailored solutions was impressive.",
+    "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150",
+    "featured": false
+  },
+  {
+    "id": "6",
+    "clientName": "Robert Kim",
+    "company": "EnergyTech Innovations",
+    "rating": 5,
+    "content": "The predictive maintenance solution from AIVantage has revolutionized our operations. We've reduced equipment downtime by 45% and maintenance costs by 30%. Their expertise in industrial AI is unmatched.",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150",
+    "featured": true
+  },
+  {
+    "id": "7",
+    "clientName": "Amanda Foster",
+    "company": "MarketingPro Agency",
+    "rating": 5,
+    "content": "AIVantage's sentiment analysis and customer insights platform has transformed how we approach marketing campaigns. We've increased campaign effectiveness by 50% and client satisfaction has never been higher.",
+    "avatar": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=150",
+    "featured": false
+  },
+  {
+    "id": "8",
+    "clientName": "James Wilson",
+    "company": "AutoDrive Technologies",
+    "rating": 5,
+    "content": "The computer vision system AIVantage developed for our autonomous vehicle testing has accelerated our development timeline by months. Their deep understanding of AI safety and reliability is exactly what we needed.",
+    "avatar": "https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?w=150",
+    "featured": false
+  },
+  {
+    "id": "9",
+    "clientName": "Rachel Martinez",
+    "company": "EduTech Solutions",
+    "rating": 5,
+    "content": "AIVantage's personalized learning platform has improved student engagement by 60% and learning outcomes by 35%. Their team's dedication to education technology and student success is remarkable.",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+    "featured": false
+  },
+  {
+    "id": "10",
+    "clientName": "Thomas Anderson",
+    "company": "SecureNet Cybersecurity",
+    "rating": 5,
+    "content": "The AI-powered threat detection system from AIVantage has strengthened our cybersecurity offerings significantly. We're now detecting and responding to threats 75% faster than before. Exceptional work!",
+    "avatar": "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=150",
+    "featured": true
+  }
+]
