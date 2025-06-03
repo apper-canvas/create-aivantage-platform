@@ -73,22 +73,22 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 glass-effect border-b border-white/20">
+{/* Navigation */}
+      <nav className="fixed top-0 w-full z-50 glass-effect border-b border-white/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 md:h-20">
+          <div className="flex justify-between items-center h-18 md:h-20">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="flex items-center space-x-3"
+              className="flex items-center space-x-4"
             >
-<div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <ApperIcon name="Zap" className="h-5 w-5 md:h-6 md:w-6 text-white" />
+              <div className="w-10 h-10 md:w-11 md:h-11 bg-gradient-to-br from-secondary to-electric-blue rounded-2xl flex items-center justify-center shadow-lg">
+                <ApperIcon name="Zap" className="h-6 w-6 md:h-7 md:w-7 text-white" />
               </div>
-              <span className="text-xl md:text-2xl font-bold text-gradient">Dreamwares</span>
+              <span className="text-2xl md:text-3xl font-bold text-gradient tracking-tight">Dreamwares</span>
             </motion.div>
             
-            <div className="hidden md:flex items-center space-x-8">
+            <div className="hidden md:flex items-center space-x-10">
               {['Services', 'About', 'Case Studies', 'Blog', 'Contact'].map((item, index) => (
                 <motion.a
                   key={item}
@@ -96,9 +96,10 @@ const Home = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   href={`#${item.toLowerCase().replace(' ', '-')}`}
-                  className="text-surface-700 hover:text-primary transition-colors font-medium"
+                  className="text-surface-700 hover:text-secondary transition-all duration-300 font-medium text-base tracking-wide relative group"
                 >
                   {item}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-secondary to-electric-cyan transition-all duration-300 group-hover:w-full"></span>
                 </motion.a>
               ))}
             </div>
@@ -106,7 +107,7 @@ const Home = () => {
             <motion.button
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              className="btn-electric text-white px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold text-sm md:text-base"
+              className="btn-electric text-white px-6 py-3 md:px-8 md:py-4 rounded-2xl font-semibold text-sm md:text-base tracking-wide"
             >
               Get Started
             </motion.button>
@@ -114,29 +115,45 @@ const Home = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="pt-24 md:pt-32 pb-16 md:pb-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-cyan-50 opacity-60"></div>
+{/* Hero Section */}
+      <section className="pt-28 md:pt-36 pb-20 md:pb-28 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-surface-50 via-blue-50/30 to-indigo-50/20"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.1),rgba(255,255,255,0))]"></div>
+        
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1
+          <div className="text-center max-w-6xl mx-auto">
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8"
+              className="mb-8"
             >
-              <span className="text-gradient">Empowering Businesses</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/60 backdrop-blur-sm border border-surface-200/50 rounded-full text-sm font-medium text-surface-700 mb-8">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                Trusted by 500+ companies worldwide
+              </div>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-8 md:mb-12 leading-tight"
+            >
+              <span className="text-surface-900">Empowering</span>
               <br />
-              <span className="text-surface-800">with Cutting-Edge</span>
+              <span className="text-gradient-blue">Businesses</span> with
               <br />
-              <span className="text-gradient">AI Solutions</span>
+              <span className="text-surface-900">Cutting-Edge</span>
+              <br />
+              <span className="text-gradient-blue">AI Solutions</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg sm:text-xl md:text-2xl text-surface-600 mb-8 md:mb-12 leading-relaxed max-w-3xl mx-auto"
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-xl sm:text-2xl md:text-3xl text-surface-600 mb-12 md:mb-16 leading-relaxed max-w-4xl mx-auto font-light"
             >
               Transform your business with our comprehensive AI services including machine learning, 
               natural language processing, computer vision, and strategic AI consulting.
@@ -145,38 +162,58 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16"
             >
-              <button className="btn-electric text-white px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold text-base md:text-lg shadow-electric hover:shadow-glow transition-all duration-300 w-full sm:w-auto">
+              <button className="btn-electric text-white px-8 py-4 md:px-10 md:py-5 rounded-2xl font-semibold text-lg md:text-xl transition-all duration-300 w-full sm:w-auto group">
                 Start Your AI Journey
-                <ApperIcon name="ArrowRight" className="ml-2 h-5 w-5 inline" />
+                <ApperIcon name="ArrowRight" className="ml-3 h-6 w-6 inline group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="text-primary border-2 border-primary px-6 py-3 md:px-8 md:py-4 rounded-xl font-semibold hover:bg-primary hover:text-white transition-all duration-300 w-full sm:w-auto">
+              <button className="text-surface-700 border-2 border-surface-300 bg-white/50 backdrop-blur-sm px-8 py-4 md:px-10 md:py-5 rounded-2xl font-semibold text-lg md:text-xl hover:bg-surface-900 hover:text-white hover:border-surface-900 transition-all duration-300 w-full sm:w-auto group">
                 Watch Demo
-                <ApperIcon name="Play" className="ml-2 h-5 w-5 inline" />
+                <ApperIcon name="Play" className="ml-3 h-6 w-6 inline group-hover:scale-110 transition-transform" />
               </button>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="flex flex-wrap justify-center items-center gap-8 text-surface-500"
+            >
+              <div className="flex items-center gap-2">
+                <ApperIcon name="Shield" className="h-5 w-5 text-green-500" />
+                <span className="text-sm font-medium">Enterprise Security</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <ApperIcon name="Zap" className="h-5 w-5 text-blue-500" />
+                <span className="text-sm font-medium">Rapid Deployment</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <ApperIcon name="Users" className="h-5 w-5 text-purple-500" />
+                <span className="text-sm font-medium">Expert Support</span>
+              </div>
             </motion.div>
           </div>
 
           {/* Floating Icons */}
           <div className="absolute inset-0 pointer-events-none">
             {[
-              { icon: 'Brain', position: 'top-1/4 left-1/4', delay: 0 },
-              { icon: 'Eye', position: 'top-1/3 right-1/4', delay: 1 },
-              { icon: 'MessageSquare', position: 'bottom-1/3 left-1/6', delay: 2 },
-              { icon: 'BarChart3', position: 'bottom-1/4 right-1/6', delay: 3 }
+              { icon: 'Brain', position: 'top-1/4 left-1/6', delay: 0 },
+              { icon: 'Eye', position: 'top-1/3 right-1/6', delay: 1.5 },
+              { icon: 'MessageSquare', position: 'bottom-1/3 left-1/5', delay: 3 },
+              { icon: 'BarChart3', position: 'bottom-1/4 right-1/5', delay: 4.5 }
             ].map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 0.1, scale: 1 }}
-                transition={{ duration: 1, delay: item.delay }}
-                className={`absolute ${item.position} hidden lg:block animate-float`}
+                initial={{ opacity: 0, scale: 0, rotate: -180 }}
+                animate={{ opacity: 0.08, scale: 1, rotate: 0 }}
+                transition={{ duration: 2, delay: item.delay, ease: "easeOut" }}
+                className={`absolute ${item.position} hidden xl:block animate-float`}
                 style={{ animationDelay: `${item.delay}s` }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                  <ApperIcon name={item.icon} className="h-8 w-8 text-primary" />
+                <div className="w-20 h-20 bg-gradient-to-br from-secondary/10 to-electric-purple/10 rounded-3xl flex items-center justify-center backdrop-blur-sm border border-white/20">
+                  <ApperIcon name={item.icon} className="h-10 w-10 text-secondary" />
                 </div>
               </motion.div>
             ))}
@@ -184,57 +221,69 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-16 md:py-24 bg-white">
+{/* Services Section */}
+      <section id="services" className="py-20 md:py-32 bg-gradient-to-b from-white to-surface-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-16 md:mb-24"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-surface-800 mb-4 md:mb-6">
-              Our <span className="text-gradient">AI Services</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/10 border border-secondary/20 rounded-full text-sm font-semibold text-secondary mb-6">
+              <ApperIcon name="Sparkles" className="h-4 w-4" />
+              Our AI Services
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-surface-900 mb-6 md:mb-8">
+              Comprehensive <span className="text-gradient-blue">AI Solutions</span>
             </h2>
-            <p className="text-lg md:text-xl text-surface-600 max-w-3xl mx-auto">
-              Comprehensive AI solutions tailored to transform your business operations and drive innovation
+            <p className="text-xl md:text-2xl text-surface-600 max-w-4xl mx-auto leading-relaxed">
+              Tailored artificial intelligence services designed to transform your business operations and accelerate growth
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {services?.map((service, index) => (
               <motion.div
                 key={service?.id || index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="floating-card bg-gradient-to-br from-surface-50 to-white p-6 md:p-8 rounded-2xl border border-surface-200 shadow-card group"
+                transition={{ delay: index * 0.15 }}
+                className="group"
               >
-                <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <ApperIcon name={service?.icon || 'Zap'} className="h-6 w-6 md:h-8 md:w-8 text-white" />
-                </div>
-                
-                <h3 className="text-lg md:text-xl font-bold text-surface-800 mb-3 md:mb-4">
-                  {service?.title || 'AI Service'}
-                </h3>
-                
-                <p className="text-surface-600 mb-4 md:mb-6 line-clamp-3">
-                  {service?.description || 'Advanced AI solutions for your business'}
-                </p>
-
-                <div className="space-y-2 mb-4 md:mb-6">
-                  {service?.features?.slice(0, 3)?.map((feature, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-surface-700">
-                      <ApperIcon name="Check" className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                      <span>{feature}</span>
+                <div className="floating-card p-8 md:p-10 rounded-3xl shadow-soft border-0 h-full relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-secondary/5 to-electric-purple/5 rounded-full -translate-y-12 translate-x-12"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-secondary to-electric-purple rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all duration-500 shadow-lg">
+                      <ApperIcon name={service?.icon || 'Zap'} className="h-8 w-8 md:h-10 md:w-10 text-white" />
                     </div>
-                  )) || []}
-                </div>
+                    
+                    <h3 className="text-xl md:text-2xl font-bold text-surface-900 mb-4 group-hover:text-secondary transition-colors duration-300">
+                      {service?.title || 'AI Service'}
+                    </h3>
+                    
+                    <p className="text-surface-600 mb-6 leading-relaxed line-clamp-3">
+                      {service?.description || 'Advanced AI solutions for your business'}
+                    </p>
 
-                <button className="w-full text-primary border border-primary px-4 py-2 rounded-lg font-medium hover:bg-primary hover:text-white transition-all duration-300">
-                  Learn More
-                </button>
+                    <div className="space-y-3 mb-8">
+                      {service?.features?.slice(0, 3)?.map((feature, idx) => (
+                        <div key={idx} className="flex items-start gap-3 text-sm text-surface-700">
+                          <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <ApperIcon name="Check" className="h-3 w-3 text-green-600" />
+                          </div>
+                          <span className="leading-relaxed">{feature}</span>
+                        </div>
+                      )) || []}
+                    </div>
+
+                    <button className="w-full text-secondary border-2 border-secondary/20 bg-secondary/5 px-6 py-3 rounded-xl font-semibold hover:bg-secondary hover:text-white hover:border-secondary transition-all duration-300 group-hover:shadow-lg">
+                      Learn More
+                    </button>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -323,63 +372,70 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Case Studies Section */}
-      <section id="case-studies" className="py-16 md:py-24 bg-white">
+{/* Case Studies Section */}
+      <section id="case-studies" className="py-20 md:py-32 bg-gradient-to-b from-white to-surface-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-16 md:mb-24"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-surface-800 mb-4 md:mb-6">
-              Featured <span className="text-gradient">Case Studies</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-100 border border-green-200 rounded-full text-sm font-semibold text-green-700 mb-6">
+              <ApperIcon name="TrendingUp" className="h-4 w-4" />
+              Success Stories
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-surface-900 mb-6 md:mb-8">
+              Featured <span className="text-gradient-blue">Case Studies</span>
             </h2>
-            <p className="text-lg md:text-xl text-surface-600 max-w-3xl mx-auto">
-              Real-world AI implementations delivering measurable results
+            <p className="text-xl md:text-2xl text-surface-600 max-w-4xl mx-auto leading-relaxed">
+              Real-world AI implementations delivering measurable results and transforming businesses across industries
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10">
             {caseStudies?.map((study, index) => (
               <motion.div
                 key={study?.id || index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="floating-card bg-gradient-to-br from-surface-50 to-white rounded-2xl overflow-hidden border border-surface-200 shadow-card"
+                transition={{ delay: index * 0.15 }}
+                className="group"
               >
-                <div className="h-48 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                  <ApperIcon name="TrendingUp" className="h-16 w-16 text-primary" />
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full">
-                      {study?.industry || 'Industry'}
-                    </span>
+                <div className="floating-card rounded-3xl overflow-hidden shadow-soft border-0 h-full">
+                  <div className="h-56 bg-gradient-to-br from-secondary/10 via-electric-purple/10 to-electric-cyan/10 flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-electric-purple/5"></div>
+                    <ApperIcon name="TrendingUp" className="h-20 w-20 text-secondary relative z-10 group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   
-                  <h3 className="text-xl font-bold text-surface-800 mb-3">
-                    {study?.title || 'Case Study Title'}
-                  </h3>
-                  
-                  <p className="text-surface-600 mb-4 line-clamp-3">
-                    {study?.challenge || 'Business challenge description'}
-                  </p>
-
-                  <div className="space-y-2 mb-6">
-                    {study?.tags?.slice(0, 3)?.map((tag, idx) => (
-                      <span key={idx} className="inline-block text-xs text-surface-700 bg-surface-100 px-2 py-1 rounded mr-2">
-                        {tag}
+                  <div className="p-8">
+                    <div className="flex items-center gap-2 mb-4">
+                      <span className="text-sm font-semibold text-secondary bg-secondary/10 px-3 py-1 rounded-full">
+                        {study?.industry || 'Industry'}
                       </span>
-                    )) || []}
-                  </div>
+                    </div>
+                    
+                    <h3 className="text-xl md:text-2xl font-bold text-surface-900 mb-4 group-hover:text-secondary transition-colors duration-300">
+                      {study?.title || 'Case Study Title'}
+                    </h3>
+                    
+                    <p className="text-surface-600 mb-6 leading-relaxed line-clamp-3">
+                      {study?.challenge || 'Business challenge description'}
+                    </p>
 
-                  <button className="w-full text-primary border border-primary px-4 py-2 rounded-lg font-medium hover:bg-primary hover:text-white transition-all duration-300">
-                    Read Case Study
-                  </button>
+                    <div className="flex flex-wrap gap-2 mb-8">
+                      {study?.tags?.slice(0, 3)?.map((tag, idx) => (
+                        <span key={idx} className="text-xs font-medium text-surface-700 bg-surface-100 px-3 py-1 rounded-full border border-surface-200">
+                          {tag}
+                        </span>
+                      )) || []}
+                    </div>
+
+                    <button className="w-full text-secondary border-2 border-secondary/20 bg-secondary/5 px-6 py-3 rounded-xl font-semibold hover:bg-secondary hover:text-white hover:border-secondary transition-all duration-300 group-hover:shadow-lg">
+                      Read Case Study
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -387,62 +443,79 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Blog Section */}
-      <section id="blog" className="py-16 md:py-24 bg-gradient-to-br from-surface-50 to-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+{/* Blog Section */}
+      <section id="blog" className="py-20 md:py-32 bg-gradient-to-b from-surface-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(6,182,212,0.05),rgba(255,255,255,0))]"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-16 md:mb-24"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-surface-800 mb-4 md:mb-6">
-              Latest <span className="text-gradient">Insights</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-electric-cyan/10 border border-electric-cyan/20 rounded-full text-sm font-semibold text-electric-cyan mb-6">
+              <ApperIcon name="BookOpen" className="h-4 w-4" />
+              Latest Insights
+            </div>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-surface-900 mb-6 md:mb-8">
+              AI <span className="text-gradient-blue">Knowledge Hub</span>
             </h2>
-            <p className="text-lg md:text-xl text-surface-600 max-w-3xl mx-auto">
-              Stay ahead with the latest AI trends and industry insights
+            <p className="text-xl md:text-2xl text-surface-600 max-w-4xl mx-auto leading-relaxed">
+              Stay ahead with the latest AI trends, industry insights, and expert analysis from our team
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             {blogPosts?.map((post, index) => (
               <motion.article
                 key={post?.id || index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="floating-card bg-white rounded-2xl overflow-hidden border border-surface-200 shadow-card"
+                transition={{ delay: index * 0.15 }}
+                className="group"
               >
-                <div className="h-48 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                  <ApperIcon name="FileText" className="h-16 w-16 text-primary" />
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-xs font-semibold text-secondary bg-secondary/10 px-2 py-1 rounded-full">
-                      {post?.category || 'AI Insights'}
-                    </span>
-                    <span className="text-xs text-surface-500">
-                      {post?.publishDate ? new Date(post.publishDate).toLocaleDateString() : 'Recent'}
-                    </span>
+                <div className="floating-card rounded-3xl overflow-hidden shadow-soft border-0 h-full">
+                  <div className="h-56 bg-gradient-to-br from-electric-cyan/10 via-secondary/10 to-electric-purple/10 flex items-center justify-center relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-electric-cyan/5 to-secondary/5"></div>
+                    <ApperIcon name="FileText" className="h-20 w-20 text-electric-cyan relative z-10 group-hover:scale-110 transition-transform duration-300" />
                   </div>
                   
-                  <h3 className="text-xl font-bold text-surface-800 mb-3 line-clamp-2">
-                    {post?.title || 'Blog Post Title'}
-                  </h3>
-                  
-                  <p className="text-surface-600 mb-4 line-clamp-3">
-                    {post?.content?.substring(0, 120) || 'Blog post excerpt...'}...
-                  </p>
-<div className="flex items-center justify-between">
-                    <span className="text-sm text-surface-500">
-                      By {post?.author || 'Dreamwares Team'}
-                    </span>
-                    <button className="text-primary font-medium hover:text-primary-dark transition-colors">
-                      Read More
-                      <ApperIcon name="ArrowRight" className="ml-1 h-4 w-4 inline" />
-                    </button>
+                  <div className="p-8">
+                    <div className="flex items-center justify-between gap-3 mb-4">
+                      <span className="text-sm font-semibold text-electric-cyan bg-electric-cyan/10 px-3 py-1 rounded-full">
+                        {post?.category || 'AI Insights'}
+                      </span>
+                      <span className="text-sm text-surface-500 font-medium">
+                        {post?.publishDate ? new Date(post.publishDate).toLocaleDateString() : 'Recent'}
+                      </span>
+                    </div>
+                    
+                    <h3 className="text-xl md:text-2xl font-bold text-surface-900 mb-4 line-clamp-2 group-hover:text-electric-cyan transition-colors duration-300">
+                      {post?.title || 'Blog Post Title'}
+                    </h3>
+                    
+                    <p className="text-surface-600 mb-6 leading-relaxed line-clamp-3">
+                      {post?.content?.substring(0, 120) || 'Blog post excerpt...'}...
+                    </p>
+
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-gradient-to-br from-electric-cyan to-secondary rounded-full flex items-center justify-center">
+                          <span className="text-white font-semibold text-sm">
+                            {(post?.author || 'Dreamwares Team').charAt(0)}
+                          </span>
+                        </div>
+                        <span className="text-sm text-surface-600 font-medium">
+                          {post?.author || 'Dreamwares Team'}
+                        </span>
+                      </div>
+                      <button className="text-electric-cyan font-semibold hover:text-secondary transition-colors duration-300 group flex items-center gap-2">
+                        Read More
+                        <ApperIcon name="ArrowRight" className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </button>
+                    </div>
                   </div>
                 </div>
               </motion.article>
@@ -451,54 +524,80 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-surface-900 text-white py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+{/* Footer */}
+      <footer className="bg-gradient-to-b from-surface-900 to-surface-950 text-white py-16 md:py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.1),rgba(255,255,255,0))]"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 md:gap-16">
             <div className="lg:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-<div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                  <ApperIcon name="Zap" className="h-6 w-6 text-white" />
+              <div className="flex items-center space-x-4 mb-8">
+                <div className="w-12 h-12 bg-gradient-to-br from-secondary to-electric-purple rounded-2xl flex items-center justify-center shadow-lg">
+                  <ApperIcon name="Zap" className="h-7 w-7 text-white" />
                 </div>
-                <span className="text-2xl font-bold">Dreamwares</span>
+                <span className="text-3xl font-bold bg-gradient-to-r from-white to-surface-300 bg-clip-text text-transparent">Dreamwares</span>
               </div>
-              <p className="text-surface-300 mb-6 max-w-md">
+              <p className="text-surface-300 mb-8 max-w-md text-lg leading-relaxed">
                 Empowering businesses with cutting-edge AI solutions. Transform your operations with machine learning, NLP, computer vision, and strategic AI consulting.
               </p>
               <div className="flex space-x-4">
-                {['Linkedin', 'Twitter', 'Github', 'Mail'].map((social) => (
-                  <button key={social} className="w-10 h-10 bg-surface-800 rounded-lg flex items-center justify-center hover:bg-primary transition-colors">
-                    <ApperIcon name={social} className="h-5 w-5" />
+                {[
+                  { name: 'Linkedin', color: 'hover:bg-blue-600' },
+                  { name: 'Twitter', color: 'hover:bg-sky-500' },
+                  { name: 'Github', color: 'hover:bg-gray-700' },
+                  { name: 'Mail', color: 'hover:bg-green-600' }
+                ].map((social) => (
+                  <button 
+                    key={social.name} 
+                    className={`w-12 h-12 bg-surface-800/50 backdrop-blur-sm rounded-xl flex items-center justify-center ${social.color} transition-all duration-300 hover:scale-110 hover:shadow-lg border border-surface-700/50`}
+                  >
+                    <ApperIcon name={social.name} className="h-5 w-5" />
                   </button>
                 ))}
               </div>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
-              <ul className="space-y-2 text-surface-300">
-                <li><a href="#" className="hover:text-white transition-colors">Machine Learning</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Computer Vision</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">NLP Solutions</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">AI Consulting</a></li>
+              <h4 className="text-xl font-bold mb-6 text-white">Services</h4>
+              <ul className="space-y-4 text-surface-300">
+                {['Machine Learning', 'Computer Vision', 'NLP Solutions', 'AI Consulting', 'Custom AI Development'].map((service) => (
+                  <li key={service}>
+                    <a href="#" className="hover:text-secondary transition-colors duration-300 flex items-center gap-2 group">
+                      <ApperIcon name="ChevronRight" className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      {service}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-surface-300">
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Case Studies</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              <h4 className="text-xl font-bold mb-6 text-white">Company</h4>
+              <ul className="space-y-4 text-surface-300">
+                {['About Us', 'Case Studies', 'Blog', 'Contact', 'Careers'].map((item) => (
+                  <li key={item}>
+                    <a href="#" className="hover:text-secondary transition-colors duration-300 flex items-center gap-2 group">
+                      <ApperIcon name="ChevronRight" className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
-<div className="border-t border-surface-800 mt-12 pt-8 text-center">
-            <p className="text-surface-400">
-              © 2024 Dreamwares. All rights reserved. Built with advanced AI technologies.
-            </p>
-</div>
+          
+          <div className="border-t border-surface-800/50 mt-16 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <p className="text-surface-400 text-center md:text-left">
+                © 2024 Dreamwares. All rights reserved. Built with advanced AI technologies.
+              </p>
+              <div className="flex items-center gap-6 text-surface-400 text-sm">
+                <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+                <a href="#" className="hover:text-white transition-colors">Security</a>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

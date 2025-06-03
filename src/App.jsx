@@ -6,7 +6,7 @@ import NotFound from './pages/NotFound'
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-surface-50 via-blue-50 to-surface-100">
+<div className="min-h-screen bg-gradient-to-br from-surface-50 via-surface-100 to-blue-50">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
